@@ -1,0 +1,288 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.4rem;
+  background: hsl(270, 20%, 96%);
+  position: relative;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    align-self: center;
+  }
+}
+
+.skewed {
+  background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  height: 50vh;
+  width: 100vw;
+  border-bottom-right-radius: 25em;
+  border-bottom-left-radius: 25em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  .skewed {
+    border-bottom-right-radius: 100em;
+    border-bottom-left-radius: 100em;
+    transform: translateX(-10vw);
+    width: 40vw;
+    height: 90vh;
+  }
+}
+
+.phone {
+  margin: 10% auto;
+  border-radius: 40px;
+  border: 13px solid hsl(0, 0%, 100%);
+  width: 31rem;
+  position: relative;
+  background: hsl(270, 20%, 96%);
+}
+
+.oval {
+  background: hsl(0, 0%, 100%);
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  border-radius: 30px;
+  top: 0;
+  right: 50%;
+  transform: translate(50px, -50%);
+}
+
+.header {
+  background: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  padding: 1.5rem 1rem;
+  display: flex;
+  gap: 1.5rem;
+  border-radius: 20px;
+}
+
+.header p {
+  white-space: nowrap;
+}
+
+.header .h_menu {
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.sign {
+  margin-right: -1rem;
+}
+
+.header h4,
+.header p,
+.header .sign,
+.header .h_menu {
+  color: hsl(0, 0%, 100%);
+}
+
+.header p {
+  opacity: 0.7;
+}
+
+.header > img {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+}
+
+.top {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.top > div {
+  background: hsl(280, 10%, 84%);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  width: 70%;
+  margin-left: 1.5rem;
+}
+
+.top p {
+  color: hsl(276, 55%, 52%);
+}
+
+.middle {
+  display: grid;
+  margin-top: 1.5rem;
+  justify-items: self-end;
+  gap: 1rem;
+}
+
+.dog_image {
+  display: flex;
+  gap: 1rem;
+}
+
+.dog_image > img {
+  width: 40px;
+  border-radius: 20px;
+}
+
+.dog_message {
+  padding: 1rem 1.5rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  width: 70%;
+  max-width: 300px;
+}
+
+.dog_message > p {
+  color: hsl(271, 15%, 43%);
+}
+
+.dog_image,
+.dog_message {
+  margin-right: 1.5rem;
+}
+
+.bottom {
+  display: grid;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  margin-left: 1.5rem;
+}
+
+.question {
+  background: hsl(280, 10%, 84%);
+  border-radius: 20px;
+  width: 70%;
+  padding: 1rem 1.5rem;
+}
+
+.question > p {
+  color: hsl(276, 55%, 52%);
+}
+
+.radio {
+  background: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  padding: 1rem 3rem;
+  border-radius: 20px;
+  width: 90%;
+  outline: hsl(289, 100%, 72%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.circle {
+  border: 1px solid hsl(289, 100%, 72%);
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  margin-left: -1rem;
+}
+
+.price {
+  justify-self: end;
+  align-self: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.description {
+  white-space: nowrap;
+  display: flex;
+  gap: 1rem;
+}
+
+.description > p {
+  color: hsl(0, 0%, 100%);
+  align-self: center;
+}
+
+.input {
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  outline: 0;
+}
+
+.chevron {
+  width: 25px;
+  transform: rotate(-90deg);
+}
+
+::placeholder {
+  color: hsl(206, 6%, 79%);
+}
+
+.input_group {
+  overflow: hidden;
+  margin: 1.5rem;
+  display: flex;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.input_group .input {
+  flex-grow: 1;
+  border: 0;
+  width: 0;
+  padding: 1.5rem 2rem;
+}
+
+.input_group .chevron {
+  margin: 4px;
+}
+
+.footer {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.footer > p {
+  color: hsl(206, 6%, 79%);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.footer > h1 {
+  color: hsl(271, 36%, 24%);
+}
